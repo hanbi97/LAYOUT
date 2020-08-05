@@ -1,0 +1,71 @@
+body{
+    background-color: #fffde7;
+}
+
+.wrap{
+    width:1200px;
+    margin: 0 auto;
+}
+
+header{
+    width:100%;
+    height: 100px;
+    background-color: #ffe082;
+}
+
+article{
+    width:100%;
+    height: 300px;
+    background-color: #ffd54f;
+}
+section{
+    overflow:hidden;
+    padding: 5%;
+    width:90%;
+    background-color: #ffca28;
+}
+section > div{
+    /*5등분, 양 여백 2% + 내용물 18% = 1개 20%*/
+    float:left;
+    margin:1%;
+    width: 18%;
+    height:170px;
+    background-color: #ff9800;
+    border-radius: 5px;
+
+}
+footer{
+    width:100%;
+    height: 100px;
+    background-color: #ffb300;
+}
+
+@media(max-width:1220px){
+    .wrap{
+        width:100%;
+    }
+    section >div{
+        width:23%;
+    }
+    section >div:nth-child(5n){/*한 줄에 4개만 나오도록*/
+        display:none;
+    }
+}
+
+@media(max-width:768px){
+    section >div{
+        width:31.3333%;
+    }
+    section >div:nth-child(5n){
+        display:block;
+    }
+}
+
+@media(max-width:480px){
+    section >div{
+        width:48%;
+    }
+    section >div:nth-child(5n){
+        display:block;
+    }
+}
